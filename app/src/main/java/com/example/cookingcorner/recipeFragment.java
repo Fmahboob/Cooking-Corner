@@ -5,26 +5,16 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.cookingcorner.api.FoodSingleton;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link apiFragment#newInstance} factory method to
+ * Use the {@link recipeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class apiFragment extends Fragment {
+public class recipeFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,32 +26,8 @@ public class apiFragment extends Fragment {
     private String mParam2;
     private Context context;
 
-    public apiFragment() {
+    public recipeFragment() {
 
-        String url =
-                "https://developer.edamam.com/" +
-                        "&appid=3e7525483c1e6aa4cd24e58ed0c9dcfd\t\n";
-        //Make a request
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            JSONObject mainObject = response.getJSONObject("main");
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.d("VOLLEY_ERROR", error.getLocalizedMessage());
-                    }
-                });
-
-        FoodSingleton.getInstance(context).getRequestQueue().add(request);
 
     }
 
@@ -74,8 +40,8 @@ public class apiFragment extends Fragment {
      * @return A new instance of fragment apiFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static apiFragment newInstance(String param1, String param2) {
-        apiFragment fragment = new apiFragment();
+    public static recipeFragment newInstance(String param1, String param2) {
+        recipeFragment fragment = new recipeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

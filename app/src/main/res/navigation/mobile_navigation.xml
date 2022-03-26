@@ -13,8 +13,8 @@
 
     <fragment
         android:id="@+id/nav_api"
-        android:name="com.example.cookingcorner.apiFragment"
-        android:label="@string/menu_api"
+        android:name="com.example.cookingcorner.recipeFragment"
+        android:label="Api"
         tools:layout="@layout/fragment_api" />
 
 </navigation>
