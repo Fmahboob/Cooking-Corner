@@ -6,9 +6,9 @@ import android.media.Image;
 @version 1.0
 This class will hold items that is in recycler view
  */
-public class Recipes {
+public class Recipe {
     private String recipeName;
-    private Image recipeImage;
+    private int recipeImage;
 
     public String getRecipeName() {
         return recipeName;
@@ -18,11 +18,16 @@ public class Recipes {
         this.recipeName = recipeName;
     }
 
-    public Image getRecipeImage() {
+    public int getRecipeImage() {
         return recipeImage;
     }
 
-    public void setRecipeImage(Image recipeImage) {
+    public void setRecipeImage(int recipeImage) {
+        this.recipeImage = recipeImage;
+    }
+
+    public Recipe(String recipeName, int recipeImage) {
+        this.recipeName = recipeName;
         this.recipeImage = recipeImage;
     }
 }
