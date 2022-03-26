@@ -39,15 +39,16 @@ public class apiFragment extends Fragment {
     public apiFragment() {
 
         String url =
-                "https://developer.edamam.com/" +
-                        "&appid=3e7525483c1e6aa4cd24e58ed0c9dcfd\t\n";
+                "themealdb.com/api.php" +
+                        "&appid=1";
         //Make a request
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONObject mainObject = response.getJSONObject("main");
+                            JSONObject mainObject = response.getJSONObject("ingredient");
+                            System.out.println(mainObject);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
