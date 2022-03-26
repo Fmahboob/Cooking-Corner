@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Farina/AndroidStudioProjects/CookingCorner/app/src/main/res/layout/content_main.xml" value="0.14628623188405798" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_api.xml" value="0.13496376811594202" />
         <entry key="app/src/main/res/layout/fragment_recipe.xml" value="0.1286231884057971" />
         <entry key="app/src/main/res/layout/fragment_search_recipe.xml" value="0.13496376811594202" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/recipe_list_item.xml" value="0.1" />
       </map>
     </option>
