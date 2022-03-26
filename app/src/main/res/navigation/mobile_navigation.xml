@@ -15,6 +15,6 @@
         android:id="@+id/nav_api"
         android:name="com.example.cookingcorner.recipeFragment"
         android:label="Api"
-        tools:layout="@layout/fragment_api" />
+        tools:layout="@layout/fragment_recipe" />
 
 </navigation>
