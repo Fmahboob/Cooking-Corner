@@ -25,6 +25,8 @@ public class CookingDatabase extends SQLiteOpenHelper {
     public static final String COLUMN_NAME = "name";
     public static final String COLUMN_QUANTITY = "quantity";
     public static final String COLUMN_PRICE = "price";
+   /* public static final String COLUMN_STRMEAL = "strMeal";
+    public static final String COLUMN_STRCATEGORY = "strCategory";*/
 
     public static final String CREATE_SHOPPING_TABLE = "CREATE TABLE " +
             TABLE_SHOPPING + "(" + COLUMN_ID + " INTEGER PRIMARY KEY," +

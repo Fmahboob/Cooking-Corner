@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,18 +16,24 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-//import com.example.cookingcorner.api.FoodSingleton;
+import com.example.cookingcorner.Pojo.Recipe;
+import com.example.cookingcorner.RecipeRecyclerView.CustomRecipeAdapter;
+import com.example.cookingcorner.api.FoodSingleton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link apiFragment#newInstance} factory method to
+ * Use the {@link RecipeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class apiFragment extends Fragment {
+public class RecipeFragment extends Fragment {
+    ArrayList<Recipe> recipeArrayList;
+    Context context;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,11 +43,9 @@ public class apiFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private Context context;
 
-    public apiFragment() {
-
-
+    public RecipeFragment() {
+        // Required empty public constructor
     }
 
     /**
@@ -48,11 +54,11 @@ public class apiFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment apiFragment.
+     * @return A new instance of fragment RecipeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static apiFragment newInstance(String param1, String param2) {
-        apiFragment fragment = new apiFragment();
+    public static RecipeFragment newInstance(String param1, String param2) {
+        RecipeFragment fragment = new RecipeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,29 +73,48 @@ public class apiFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_api, container, false);
-       /* String url =
-                "https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
+
+        View view = inflater.inflate(R.layout.fragment_recipe, container, false);
+        RecyclerView recyclerView = view.findViewById(R.id.recipeList);
+        Recipe recipe = new Recipe();
+        recipeArrayList = new ArrayList<>();
+
+        String url =
+                "https://www.themealdb.com/api/json/v1/1/search.php?f=a";
 
         //Make a request
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
+
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONArray jasonArray = response.getJSONArray("meals");
-                            JSONObject mainObject = jasonArray.getJSONObject(0);
-                            System.out.println(mainObject);
 
+                            JSONArray jsonArray = response.getJSONArray("meals");
+
+                            for(int i = 0; i < jsonArray.length(); i++){
+                                JSONObject mainObject = jsonArray.getJSONObject(i);
+                                recipe.setStrMeal(mainObject.getString("strMeal"));
+                                recipe.setStrMealThumb(mainObject.getString("strMealThumb"));
+                                recipeArrayList.add(new Recipe(mainObject.getString("strMeal"), mainObject.getString("strMealThumb")));
+
+                                Log.d("RECIPE", mainObject.getString("strMeal"));
+                                Log.d("RECIPE", mainObject.getString("strMealThumb"));
+
+                                CustomRecipeAdapter adopter = new CustomRecipeAdapter(recipeArrayList, getContext());
+                                recyclerView.setAdapter(adopter);
+                                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
+
                     }
                 },
                 new Response.ErrorListener() {
@@ -99,13 +124,11 @@ public class apiFragment extends Fragment {
                     }
                 });
 
-        FoodSingleton.getInstance(getContext()).getRequestQueue().add(request);*/
-
+        FoodSingleton.getInstance(getContext()).getRequestQueue().add(request);
 
         return view;
-    }
-
 
     }
 
 
+}

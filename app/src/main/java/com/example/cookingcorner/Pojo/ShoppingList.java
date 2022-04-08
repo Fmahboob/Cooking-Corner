@@ -26,6 +26,7 @@ public class ShoppingList implements Parcelable {
         this.price = price;
     }
 
+
     protected ShoppingList(Parcel in) {
         gid = in.readInt();
         name = in.readString();
@@ -76,6 +77,7 @@ public class ShoppingList implements Parcelable {
     public void setPrice(double price) {
         this.price = price;
     }
+
 
     @Override
     public int describeContents() {
