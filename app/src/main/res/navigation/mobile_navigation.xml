@@ -15,6 +15,7 @@
         android:id="@+id/nav_api"
         android:name="com.example.cookingcorner.apiFragment"
         android:label="@string/menu_api"
+
         tools:layout="@layout/fragment_api" />
     <fragment
         android:id="@+id/nav_shopping"
@@ -27,6 +28,21 @@
         android:label="@string/menu_recipe"
         tools:layout="@layout/fragment_recipe" />
 
+
+        <action
+            android:id="@+id/action_nav_api_to_detailFragment"
+            app:destination="@id/detailFragment" />
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.cookingcorner.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.cookingcorner.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
 
 
 </navigation>
