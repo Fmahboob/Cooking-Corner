@@ -15,6 +15,7 @@
         android:id="@+id/nav_api"
         android:name="com.example.cookingcorner.apiFragment"
         android:label="@string/menu_api"
+
         tools:layout="@layout/fragment_api" >
         <action
             android:id="@+id/action_nav_api_to_detailFragment"
@@ -30,5 +31,6 @@
         android:name="com.example.cookingcorner.FavouriteFragment"
         android:label="fragment_favourite"
         tools:layout="@layout/fragment_favourite" />
+
 
 </navigation>
