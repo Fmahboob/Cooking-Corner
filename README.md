@@ -51,3 +51,15 @@ In this app Customer can search food recipes. They can save their favourite reci
 
 
 
+Screen shots of the Application
+
+![image](https://user-images.githubusercontent.com/91429784/163279088-eab2f3d5-8418-4399-92ec-461fa288e359.png)
+
+![image](https://user-images.githubusercontent.com/91429784/163279275-5c730dd1-7e5b-4196-b943-18474e0055e7.png)
+
+![image](https://user-images.githubusercontent.com/91429784/163279304-da363257-07e0-4eab-bc2b-b8348fd3d066.png)
+
+![image](https://user-images.githubusercontent.com/91429784/163279332-05c94990-30cb-4432-8eca-dc6ff25bb786.png)
+
+
+
