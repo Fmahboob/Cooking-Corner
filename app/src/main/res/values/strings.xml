@@ -17,4 +17,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us">We are here to help you start your culinary journey. Our app helps you search for various recipes for you to cook. You can also add ingredients from different recipes to a shopping list so you remember all the ingredients for the dish you will cook. We also have a map feature that allows you to find grocery stores near you. If you enjoy a recipe you can share it with your friends and family so they can try it to!</string>
+    <string name="heading_about">Cooking Corner</string>
+    <string name="logoDescription">Logo Of Our app</string>
 </resources>
