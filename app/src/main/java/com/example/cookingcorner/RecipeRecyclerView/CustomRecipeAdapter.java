@@ -63,4 +63,10 @@ public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapte
             recipeImage = itemView.findViewById(R.id.recipe_image);
         }
     }
+    public interface RecyclerViewClickListener {
+        //item Click listener for product
+//        void onItemClick(View view, int position);
+
+        void onClicked(Recipe recipe);
+    }
 }

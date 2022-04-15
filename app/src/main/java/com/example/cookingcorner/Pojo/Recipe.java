@@ -1,6 +1,8 @@
 package com.example.cookingcorner.Pojo;
 
-public class Recipe {
+import java.io.Serializable;
+
+public class Recipe implements Serializable {
     private String strMeal;
     private String strInstructions;
     private String strMealThumb;
