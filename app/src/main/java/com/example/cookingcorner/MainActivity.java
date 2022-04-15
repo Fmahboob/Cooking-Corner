@@ -1,8 +1,11 @@
 package com.example.cookingcorner;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.example.cookingcorner.Pojo.Recipe;
 import com.google.android.material.snackbar.Snackbar;
@@ -10,6 +13,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -22,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +39,19 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                NavDestination currentFragment = navController.getCurrentDestination();
+                if (currentFragment.getId() == R.id.action_nav_api_to_detailFragment) {
+
+                    Intent intent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://www.facebook.com/"));
+                    try{
+                        startActivity(intent);
+                    }catch (Exception e){
+                        Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                    }
+
+
+                }
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -51,6 +67,16 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+    public void openDetailFragment(Recipe recipe) {
+        DetailFragment newFragment = DetailFragment.newInstance(recipe);
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.nav_host_fragment_content_main, newFragment,"DETAILS");
+        transaction.addToBackStack(null);
+        // Commit the transaction
+        transaction.commit();
+
+
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

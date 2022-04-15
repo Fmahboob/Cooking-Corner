@@ -108,6 +108,7 @@ public class RecipeFragment extends Fragment {
 
                                 CustomRecipeAdapter adopter = new CustomRecipeAdapter(recipeArrayList, getContext(), new CustomRecipeAdapter.RecyclerViewClickListener() {
                                     public void onClicked(Recipe recipe){
+                                        ((MainActivity)getActivity()).openDetailFragment(recipe);
 
                                     }
                                 });
