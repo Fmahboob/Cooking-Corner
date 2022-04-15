@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="font_size">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="font_color">
+        <item  name="colorAccent">#FFBB86FC</item>
+        <item  name="purple_500">#FF6200EE</item>
+        <item  name="Black">#000000</item>
+        <item>Red</item>
+    </string-array>
+
+    <string-array name="font_style">
+        <item>sans-serif</item>
+        <item>Acme</item>
+        <item>cursive</item>
+    </string-array>
+
+</resources>
