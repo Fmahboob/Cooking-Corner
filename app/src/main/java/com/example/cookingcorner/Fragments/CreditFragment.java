@@ -11,6 +11,11 @@ import android.view.ViewGroup;
 import com.example.cookingcorner.R;
 
 /**
+ * name: Komathy Mugunthan
+ * Credit Fragment
+ */
+
+/**
  * A simple {@link Fragment} subclass.
  * Use the {@link CreditFragment#newInstance} factory method to
  * create an instance of this fragment.

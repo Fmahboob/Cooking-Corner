@@ -13,6 +13,11 @@ import com.example.cookingcorner.Pojo.ShoppingList;
 
 import java.util.ArrayList;
 
+/**
+ * name: Komathy Mugunthan
+ * Cooking Database
+ */
+
 public class CookingDatabase extends SQLiteOpenHelper {
 
     public static final int DATABASE_VERSION = 1;

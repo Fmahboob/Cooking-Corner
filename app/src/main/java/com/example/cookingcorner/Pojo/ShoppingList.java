@@ -3,6 +3,11 @@ package com.example.cookingcorner.Pojo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+/**
+ * name: Komathy Mugunthan
+ * Shopping List Class
+ */
+
 public class ShoppingList implements Parcelable {
     private int gid;
     private String name;

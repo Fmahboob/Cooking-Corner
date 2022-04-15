@@ -6,6 +6,10 @@ import androidx.preference.PreferenceFragmentCompat;
 
 import com.example.cookingcorner.R;
 
+/**
+ * name: Komathy Mugunthan
+ * Settings Fragment
+ */
 
 public class SettingsFragment extends PreferenceFragmentCompat {
     @Override

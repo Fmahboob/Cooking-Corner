@@ -18,6 +18,11 @@ import com.example.cookingcorner.R;
 
 import java.util.ArrayList;
 
+/**
+ * name: Komathy Mugunthan
+ * Custom Shopping Adapter
+ */
+
 public class CustomShoppingAdapter extends RecyclerView.Adapter<CustomShoppingAdapter.CustomViewHolder> {
     private ArrayList<ShoppingList> shoppingArrayList;
     private Context context;
