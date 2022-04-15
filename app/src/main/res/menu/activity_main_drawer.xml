@@ -9,18 +9,16 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_api"
-            android:icon="@drawable/ic_baseline_api_24"
-            android:title="@string/menu_api" />
-        <item
-            android:id="@+id/nav_shopping"
+            android:id="@+id/nav_shop"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
             android:title="@string/menu_shop" />
         <item
-            android:id="@+id/nav_Recipe"
+            android:id="@+id/nav_recipe"
             android:icon="@drawable/ic_baseline_notes_24"
             android:title="@string/menu_recipe" />
-
-
+        <item
+            android:id="@+id/nav_credit"
+            android:icon="@drawable/ic_baseline_notes_24"
+            android:title="@string/menu_credit" />
     </group>
 </menu>
