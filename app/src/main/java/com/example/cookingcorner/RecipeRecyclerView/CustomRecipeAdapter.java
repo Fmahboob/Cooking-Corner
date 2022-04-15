@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cookingcorner.Pojo.Recipe;
@@ -21,10 +22,12 @@ public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapte
 
     private ArrayList<Recipe> recipeArrayList;
     private Context context;
+    private RecyclerViewClickListener listener;
 
-    public CustomRecipeAdapter(ArrayList<Recipe> recipeArrayList, Context context) {
+    public CustomRecipeAdapter(ArrayList<Recipe> recipeArrayList, Context context, RecyclerViewClickListener listener) {
         this.recipeArrayList = recipeArrayList;
         this.context = context;
+        this.listener = listener;
     }
 
     @NonNull
@@ -56,11 +59,13 @@ public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapte
 
         protected TextView recipeName;
         protected ImageView recipeImage;
+        protected ConstraintLayout mainView;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             recipeName = itemView.findViewById(R.id.recipe_name);
             recipeImage = itemView.findViewById(R.id.recipe_image);
+            mainView = itemView.findViewById(R.id.mainView);
         }
     }
     public interface RecyclerViewClickListener {

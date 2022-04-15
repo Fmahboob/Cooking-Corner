@@ -106,7 +106,11 @@ public class RecipeFragment extends Fragment {
                                 Log.d("RECIPE", mainObject.getString("strMeal"));
                                 Log.d("RECIPE", mainObject.getString("strMealThumb"));
 
-                                CustomRecipeAdapter adopter = new CustomRecipeAdapter(recipeArrayList, getContext());
+                                CustomRecipeAdapter adopter = new CustomRecipeAdapter(recipeArrayList, getContext(), new CustomRecipeAdapter.RecyclerViewClickListener() {
+                                    public void onClicked(Recipe recipe){
+
+                                    }
+                                });
                                 recyclerView.setAdapter(adopter);
                                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
