@@ -20,6 +20,11 @@ import com.example.cookingcorner.ShoppingRecyclerView.CustomShoppingAdapter;
 import java.util.ArrayList;
 
 /**
+ * name: Komathy Mugunthan
+ * Shopping Fragment
+ */
+
+/**
  * A simple {@link Fragment} subclass.
  * Use the {@link ShoppingFragment#newInstance} factory method to
  * create an instance of this fragment.
