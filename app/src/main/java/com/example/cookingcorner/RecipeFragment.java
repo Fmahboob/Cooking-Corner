@@ -2,15 +2,15 @@ package com.example.cookingcorner;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -81,11 +81,13 @@ public class RecipeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_recipe, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recipeList);
+
+
         Recipe recipe = new Recipe();
         recipeArrayList = new ArrayList<>();
 
         String url =
-                "https://www.themealdb.com/api/json/v1/1/search.php?f=a";
+                "https://www.themealdb.com/api/json/v1/1/search.php?s=a";
 
         //Make a request
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -97,18 +99,23 @@ public class RecipeFragment extends Fragment {
 
                             JSONArray jsonArray = response.getJSONArray("meals");
 
-                            for(int i = 0; i < jsonArray.length(); i++){
+                            for(int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject mainObject = jsonArray.getJSONObject(i);
                                 recipe.setStrMeal(mainObject.getString("strMeal"));
                                 recipe.setStrMealThumb(mainObject.getString("strMealThumb"));
-                                recipeArrayList.add(new Recipe(mainObject.getString("strMeal"), mainObject.getString("strMealThumb")));
+                                recipe.setStrInstructions(mainObject.getString("strInstructions"));
+                                recipeArrayList.add(new Recipe(mainObject.getString("strMeal"), mainObject.getString("strMealThumb"),mainObject.getString("strInstructions")));
 
-                                Log.d("RECIPE", mainObject.getString("strMeal"));
-                                Log.d("RECIPE", mainObject.getString("strMealThumb"));
 
-                                CustomRecipeAdapter adopter = new CustomRecipeAdapter(recipeArrayList, getContext());
+                                CustomRecipeAdapter adopter = new CustomRecipeAdapter(recipeArrayList, getContext(), new CustomRecipeAdapter.RecyclerViewClickListener() {
+                                    @Override
+                                    public void onClicked(Recipe recipe) {
+                                        ((MainActivity)getActivity()).openDetailFragment(recipe);
+                                    }
+                                });
                                 recyclerView.setAdapter(adopter);
                                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
 
                             }
                         } catch (JSONException e) {
@@ -129,6 +136,7 @@ public class RecipeFragment extends Fragment {
         return view;
 
     }
+
 
 
 }

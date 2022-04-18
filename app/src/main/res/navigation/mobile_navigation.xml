@@ -43,6 +43,11 @@
         android:name="com.example.cookingcorner.FavouriteFragment"
         android:label="fragment_favourite"
         tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.cookingcorner.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 
 
 </navigation>

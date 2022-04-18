@@ -1,6 +1,8 @@
 package com.example.cookingcorner.Pojo;
 
-public class Recipe {
+import java.io.Serializable;
+
+public class Recipe implements Serializable {
     private String strMeal;
     private String strInstructions;
     private String strMealThumb;
@@ -15,9 +17,10 @@ public class Recipe {
     private String strIngredient9;
 
 
-    public Recipe(String strMeal, String strMealThumb) {
+    public Recipe(String strMeal, String strMealThumb,String strInstructions) {
         this.strMeal = strMeal;
         this.strMealThumb = strMealThumb;
+        this.strInstructions=strInstructions;
     }
 
     public Recipe() {

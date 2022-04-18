@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cookingcorner.Pojo.Recipe;
@@ -16,15 +17,19 @@ import com.example.cookingcorner.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapter.CustomViewHolder>{
 
     private ArrayList<Recipe> recipeArrayList;
     private Context context;
+    private RecyclerViewClickListener listener;
 
-    public CustomRecipeAdapter(ArrayList<Recipe> recipeArrayList, Context context) {
+
+    public CustomRecipeAdapter(ArrayList<Recipe> recipeArrayList, Context context,RecyclerViewClickListener listener) {
         this.recipeArrayList = recipeArrayList;
         this.context = context;
+        this.listener=listener;
     }
 
     @NonNull
@@ -42,6 +47,14 @@ public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapte
         holder.recipeName.setText(recipe.getStrMeal());
 
         Picasso.get().load(recipe.getStrMealThumb()).into(holder.recipeImage);
+        holder.mainView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            listener.onClicked(recipe);
+            }
+        });
+
+
     }
 
     @Override
@@ -56,11 +69,21 @@ public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapte
 
         protected TextView recipeName;
         protected ImageView recipeImage;
+        protected ConstraintLayout mainView;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             recipeName = itemView.findViewById(R.id.recipe_name);
             recipeImage = itemView.findViewById(R.id.recipe_image);
+            mainView = itemView.findViewById(R.id.mainView);
         }
+    }
+
+
+    public interface RecyclerViewClickListener {
+        //item Click listener for product
+//        void onItemClick(View view, int position);
+
+        void onClicked(Recipe recipe);
     }
 }
