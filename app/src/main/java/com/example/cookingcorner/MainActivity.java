@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.cookingcorner;
 
 import android.os.Bundle;

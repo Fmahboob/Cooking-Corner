@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.cookingcorner.RecipeRecyclerView;
 
 import android.content.Context;
@@ -87,3 +88,4 @@ public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapte
         void onClicked(Recipe recipe);
     }
 }
+

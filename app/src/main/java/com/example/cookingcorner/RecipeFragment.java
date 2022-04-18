@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.cookingcorner;
 
 import android.content.Context;
@@ -137,6 +138,3 @@ public class RecipeFragment extends Fragment {
 
     }
 
-
-
-}
