@@ -5,7 +5,11 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
+
     <string name="action_settings">Settings</string>
+    <string name="font_size_settings">Font Size</string>
+    <string name="font_color_settings">Font Color</string>
+    <string name="font_style_settings">Font Style</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_api">API</string>
@@ -20,6 +24,9 @@
     <string name="credit_text_2">https://www.themealdb.com/api.php</string>
     <string name="credit_text_3">https://pixabay.com/pt/vectors/cozinhando-logotipo-chefe-de-cozinha-5201968/</string>
     <string name="credit_text_4">https://www.google.com/search?q=cooking%20logotbm=ischchips=q:cooking%20logo%2Cg_1:kitchen:6emtaLk8eUM%3Dtbs=il:clhl=en-USsa=Xved=0CAAQ1vwEahcKEwj4yKzbnpH3AhUAAAAAHQAAAAAQAgbiw=1349bih=625#imgrc=2UnzF6k6cdHztM</string>
+
+
+
 
 
     <!-- TODO: Remove or change this placeholder text -->

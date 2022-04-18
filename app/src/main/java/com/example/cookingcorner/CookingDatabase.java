@@ -56,7 +56,7 @@ public class CookingDatabase extends SQLiteOpenHelper {
     public void addShoppingList(ShoppingList shoppingList) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(COLUMN_ID, shoppingList.getGid());
+       // values.put(COLUMN_ID, shoppingList.getGid());
         values.put(COLUMN_NAME, shoppingList.getName());
         values.put(COLUMN_QUANTITY, shoppingList.getQuantity());
         values.put(COLUMN_PRICE, shoppingList.getPrice());
@@ -79,7 +79,9 @@ public class CookingDatabase extends SQLiteOpenHelper {
                     cursor.getInt(0),
                     cursor.getString(1),
                     cursor.getDouble(2),
-                    cursor.getDouble(3));
+                    cursor.getDouble(3),
+                    cursor.getString(4),
+                    cursor.getString(5));
         }
         db.close();
         return shoppingList;
@@ -95,7 +97,9 @@ public class CookingDatabase extends SQLiteOpenHelper {
                     cursor.getInt(0),
                     cursor.getString(1),
                     cursor.getDouble(2),
-                    cursor.getDouble(3)
+                    cursor.getDouble(3),
+                    cursor.getString(4),
+                    cursor.getString(5)
             ));
         }
         db.close();
