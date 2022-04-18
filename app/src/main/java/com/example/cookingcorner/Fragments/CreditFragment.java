@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import com.example.cookingcorner.R;
 
@@ -65,7 +68,49 @@ public class CreditFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_credit, container, false);
+        View view = inflater.inflate(R.layout.fragment_credit, container, false);
+
+        TextView creditPageTitle = view.findViewById(R.id.creditPageTitle);
+        Animation animation1 = AnimationUtils.loadAnimation(getContext(), R.anim.credit_animation);
+
+        creditPageTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                creditPageTitle.startAnimation(animation1);
+            }
+        });
+
+        TextView textView2 = view.findViewById(R.id.textView2);
+        Animation animation2 = AnimationUtils.loadAnimation(getContext(), R.anim.anim_out);
+
+        textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView2.startAnimation(animation2);
+            }
+        });
+
+        TextView textView3 = view.findViewById(R.id.textView3);
+        Animation animation3 = AnimationUtils.loadAnimation(getContext(), R.anim.anim_back_out);
+
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView3.startAnimation(animation3);
+            }
+        });
+
+        TextView textView4 = view.findViewById(R.id.textView4);
+        Animation animation4 = AnimationUtils.loadAnimation(getContext(), R.anim.anim_back_in);
+
+        textView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView4.startAnimation(animation4);
+            }
+        });
+
+
+        return view;
     }
 }

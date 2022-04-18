@@ -96,7 +96,7 @@ public class RecipeFragment extends Fragment {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         String url =
-                "https://www.themealdb.com/api/json/v1/1/search.php?f=a";
+                "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood";
 
         //Make a request
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
