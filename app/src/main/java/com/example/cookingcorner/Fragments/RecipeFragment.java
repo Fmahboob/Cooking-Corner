@@ -96,7 +96,7 @@ public class RecipeFragment extends Fragment {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         String url =
-                "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood";
+                "https://www.themealdb.com/api/json/v1/1/search.php?s=a";
 
         //Make a request
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -112,7 +112,9 @@ public class RecipeFragment extends Fragment {
                                 JSONObject mainObject = jsonArray.getJSONObject(i);
                                 recipe.setStrMeal(mainObject.getString("strMeal"));
                                 recipe.setStrMealThumb(mainObject.getString("strMealThumb"));
-                                recipeArrayList.add(new Recipe(mainObject.getString("strMeal"), mainObject.getString("strMealThumb")));
+                                recipe.setStrCategory(mainObject.getString("strCategory"));
+                                recipe.setStrInstructions(mainObject.getString("strInstructions"));
+                                recipeArrayList.add(new Recipe(mainObject.getString("strMeal"), mainObject.getString("strMealThumb"), mainObject.getString("strCategory"), mainObject.getString("strInstructions")));
 
                                 Log.d("RECIPE", mainObject.getString("strMeal"));
                                 Log.d("RECIPE", mainObject.getString("strMealThumb"));
