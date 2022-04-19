@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<SwitchPreferenceCompat
+    app:key="grid"
+    app:title="Tablet View Style"/>
+
+    <ListPreference
+    android:defaultValue="20"
+    android:entries="@array/font_size"
+    android:entryValues="@array/font_size"
+    android:key="fontSize"
+    android:title="Font size"
+    android:summary="Please select the font size"/>
+
+    </PreferenceScreen>

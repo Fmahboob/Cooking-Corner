@@ -5,16 +5,43 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
+
     <string name="action_settings">Settings</string>
+    <string name="font_size_settings">Font Size</string>
+    <string name="font_color_settings">Font Color</string>
+    <string name="font_style_settings">Font Style</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_api">API</string>
-    <string name="menu_shop">Shopping</string>
+    <string name="menu_shop">Shopping List</string>
     <string name="menu_recipe">Recipe</string>
+    <string name="menu_credit">Credit</string>
 
     <string name="recipe_name_holder">Recipe Name</string>
     <string name="recipe_image_holder">Image Of Recipe</string>
 
+    <string name="credit_title">Credit Page</string>
+    <string name="credit_text_2">https://www.themealdb.com/api.php</string>
+    <string name="credit_text_3">https://pixabay.com/pt/vectors/cozinhando-logotipo-chefe-de-cozinha-5201968/</string>
+    <string name="credit_text_4">https://www.google.com/search?q=cooking%20logotbm=ischchips=q:cooking%20logo%2Cg_1:kitchen:6emtaLk8eUM%3Dtbs=il:clhl=en-USsa=Xved=0CAAQ1vwEahcKEwj4yKzbnpH3AhUAAAAAHQAAAAAQAgbiw=1349bih=625#imgrc=2UnzF6k6cdHztM</string>
+
+    <string name="tip1">Read the recipe all the way through before you start.</string>
+    <string name="tip2">Use a damp towel to keep a cutting board in place.</string>
+    <string name="tip3">Keep knives sharp</string>
+    <string name="tip4">Thoroughly dry all meats before cooking.</string>
+    <string name="tip5">Never use damp oven mitts. </string>
+
+    <string name="tipDetail1">he very first step in cooking is to read the recipe all the way through, from beginning to end. This way you will know that you have all the ingredients and tools on hand</string>
+    <string name="tipDetail2">By putting damp towel under cutting board it will lock it in place by placing a damp paper towel or dish towel underneath it.</string>
+    <string name="tipDetail3">Knife Sharps really does make slicing and chopping so much easier. Plus, you’re less likely to cut yourself with a sharp knife than a dull one, which would be prone to slipping on the food’s surface and landing</string>
+    <string name="tipDetail4">This helps them brown quickly and, on poultry, crisps up the skin. </string>
+    <string name="tipDetail5">The purpose of an oven mitt is to be a heat insulator, the water just nullifies this effect. Steam has nothing to do with it, as the effect happens even far below waters boiling temperature.</string>
+
+    <string name="about_us">We are here to help you start your culinary journey. Our app helps you search for various recipes for you to cook. You can also add ingredients from different recipes to a shopping list so you remember all the ingredients for the dish you will cook. We also have a map feature that allows you to find grocery stores near you. If you enjoy a recipe you can share it with your friends and family so they can try it to!</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_timer">Timer</string>
+    <string name="menu_tips">Tips</string>
+    <string name="menu_about">About Us</string>
 </resources>

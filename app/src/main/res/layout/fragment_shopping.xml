@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.ShoppingFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shoppingList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutAnimation="@anim/shipping_list_layout_animation" >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/mapIntent"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryDarkColor"
+        android:foregroundGravity="left|bottom"
+        android:gravity="right|left|end"
+        app:icon="@drawable/ic_baseline_map_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</LinearLayout>
