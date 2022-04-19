@@ -38,8 +38,8 @@
     <string name="tipDetail5">The purpose of an oven mitt is to be a heat insulator, the water just nullifies this effect. Steam has nothing to do with it, as the effect happens even far below waters boiling temperature.</string>
 
 
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="action_timer">Timer</string>
+    <string name="menu_tips">Tips</string>
 </resources>

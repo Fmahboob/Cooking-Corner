@@ -14,24 +14,23 @@ import com.example.cookingcorner.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FavouriteFragment#newInstance} factory method to
+ * Use the {@link TipsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FavouriteFragment extends Fragment {
+public class TipsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final int ARG_PARAM1 = 1;
-    private static final int ARG_PARAM2 = R.drawable.ic_baseline_add_24;
-
-    private static final int ARG_PARAM3 = 2;
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM3 = "param3";
 
     // TODO: Rename and change types of parameters
     private int mParam1;
     private int mParam2;
     private int mParam3;
 
-    public FavouriteFragment() {
+    public TipsFragment() {
         // Required empty public constructor
     }
 
@@ -41,15 +40,15 @@ public class FavouriteFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FavouriteFragment.
+     * @return A new instance of fragment TipsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FavouriteFragment newInstance(int param1, int param2, int param3) {
-        FavouriteFragment fragment = new FavouriteFragment();
+    public static TipsFragment newInstance(int param1, int param2, int param3) {
+        TipsFragment fragment = new TipsFragment();
         Bundle args = new Bundle();
-        args.putInt(String.valueOf(ARG_PARAM1), param1);
-        args.putInt(String.valueOf(ARG_PARAM2), param2);
-        args.putInt(String.valueOf(ARG_PARAM2), param3);
+        args.putInt(ARG_PARAM1, param1);
+        args.putInt(ARG_PARAM2, param2);
+        args.putInt(ARG_PARAM3, param3);
         fragment.setArguments(args);
         return fragment;
     }
@@ -58,35 +57,30 @@ public class FavouriteFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getInt(String.valueOf(ARG_PARAM1));
-            mParam2 = getArguments().getInt(String.valueOf(ARG_PARAM2));
-            mParam3 = getArguments().getInt(String.valueOf(ARG_PARAM3));
+            mParam1 = getArguments().getInt(ARG_PARAM1);
+            mParam2 = getArguments().getInt(ARG_PARAM2);
+            mParam3 = getArguments().getInt(ARG_PARAM3);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_favourite, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_tips, container, false);
         if(mParam1 != 0){
-            TextView tip = (TextView) view.findViewById(R.id.detailRecipeName);
-            tip.setText(mParam1);
+            TextView name = view.findViewById(R.id.tipName);
+            name.setText(mParam1);
         }
-
         if(mParam2 != 0){
-            ImageView tipImage = (ImageView) view.findViewById(R.id.detailRecipeImage);
-           tipImage.setImageResource(mParam2);
+            ImageView tipImage = view.findViewById(R.id.tipImage);
+            tipImage.setImageResource(mParam2);
+        }
+        if(mParam3 != 0){
+           TextView tipDescription = view.findViewById(R.id.tipDescription1);
+            tipDescription.setText(mParam3);
         }
 
-        if(mParam3 != 0){
-            TextView tipDetail = (TextView) view.findViewById(R.id.detailRecipeName);
-            tipDetail.setText(mParam1);
-        }
 
         return view;
-
-
-
     }
 }
