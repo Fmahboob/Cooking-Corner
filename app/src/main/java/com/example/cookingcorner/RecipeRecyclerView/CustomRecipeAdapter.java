@@ -40,6 +40,8 @@ public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapte
         Recipe recipe = recipeArrayList.get(position);
 
         holder.recipeName.setText(recipe.getStrMeal());
+        holder.recipeCategory.setText(recipe.getStrCategory());
+        holder.recipeDetail.setText(recipe.getStrInstructions());
 
         Picasso.get().load(recipe.getStrMealThumb()).into(holder.recipeImage);
     }
@@ -56,11 +58,15 @@ public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapte
 
         protected TextView recipeName;
         protected ImageView recipeImage;
+        protected TextView recipeCategory;
+        protected TextView recipeDetail;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             recipeName = itemView.findViewById(R.id.recipe_name);
             recipeImage = itemView.findViewById(R.id.recipe_image);
+            recipeCategory = itemView.findViewById(R.id.recipe_category);
+            recipeDetail = itemView.findViewById(R.id.recipe_detail);
         }
     }
 

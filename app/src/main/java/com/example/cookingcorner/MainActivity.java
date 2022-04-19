@@ -1,12 +1,14 @@
 package com.example.cookingcorner;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.example.cookingcorner.Fragments.AddEditFragment;
 import com.google.android.material.snackbar.Snackbar;
@@ -40,12 +42,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setImageResource(R.drawable.ic_baseline_add_24);
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
 
                 NavDestination currentFragment = navController.getCurrentDestination();
                 if (currentFragment.getId() == R.id.nav_shop) {
@@ -55,9 +55,25 @@ public class MainActivity extends AppCompatActivity {
                         navController
                                 .navigate(R.id.addEditFragment, extra);
                 }
-                else if(currentFragment.getId() == R.id.nav_recipe){
-                    navController.navigate(R.id.nav_recipe);
+
+
+                else if (currentFragment.getId() == R.id.nav_recipe){
+
+                    binding.appBarMain.fab.setImageResource(R.drawable.ic_baseline_share_24);
+
+                    Intent intent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://www.facebook.com/"));
+                    try{
+                        startActivity(intent);
+                    }catch (Exception e){
+                        Snackbar.make(view, "Cannot find this app", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
                 }
+                else {
+                    binding.appBarMain.fab.hide();
+                }
+
 
             }
         });

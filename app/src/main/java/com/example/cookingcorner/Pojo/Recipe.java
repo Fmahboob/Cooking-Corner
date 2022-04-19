@@ -15,9 +15,14 @@ public class Recipe {
     private String strIngredient9;
 
 
-    public Recipe(String strMeal, String strMealThumb) {
+    private String strCategory;
+
+
+    public Recipe(String strMeal, String strMealThumb, String strCategory, String strInstructions ) {
         this.strMeal = strMeal;
         this.strMealThumb = strMealThumb;
+        this.strCategory = strCategory;
+        this.strInstructions = strInstructions;
     }
 
     public Recipe() {
@@ -118,6 +123,13 @@ public class Recipe {
 
     public void setStrIngredient9(String strIngredient9) {
         this.strIngredient9 = strIngredient9;
+    }
+    public String getStrCategory() {
+        return strCategory;
+    }
+
+    public void setStrCategory(String strCategory) {
+        this.strCategory = strCategory;
     }
 
 
