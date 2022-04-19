@@ -102,14 +102,7 @@ public class CustomShoppingAdapter extends RecyclerView.Adapter<CustomShoppingAd
             }
         });
 
-        holder.video.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(shoppingList.getVideo()));
-                context.startActivity(intent);
-            }
-        });
+
 /*
         holder.map.setOnClickListener(new View.OnClickListener() {
             @Override

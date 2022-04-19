@@ -13,28 +13,22 @@ public class ShoppingList implements Parcelable {
     private String name;
     private double quantity;
     private double price;
-    private String map;
-    private String video;
 
     public ShoppingList(){
 
     }
 
-    public ShoppingList(String name, double quantity, double price, String map, String video) {
+    public ShoppingList(String name, double quantity, double price) {
         this.name = name;
         this.quantity = quantity;
         this.price = price;
-        this.map = map;
-        this.video = video;
     }
 
-    public ShoppingList(int gid, String name, double quantity, double price, String map, String video) {
+    public ShoppingList(int gid, String name, double quantity, double price) {
         this.gid = gid;
         this.name = name;
         this.quantity = quantity;
         this.price = price;
-        this.map = map;
-        this.video = video;
     }
 
 
@@ -43,8 +37,6 @@ public class ShoppingList implements Parcelable {
         name = in.readString();
         quantity = in.readDouble();
         price = in.readDouble();
-        map = in.readString();
-        video = in.readString();
     }
 
     public static final Creator<ShoppingList> CREATOR = new Creator<ShoppingList>() {
@@ -91,21 +83,6 @@ public class ShoppingList implements Parcelable {
         this.price = price;
     }
 
-    public String getMap() {
-        return map;
-    }
-
-    public void setMap(String map) {
-        this.map = map;
-    }
-
-    public String getVideo() {
-        return video;
-    }
-
-    public void setVideo(String video) {
-        this.video = video;
-    }
 
     @Override
     public int describeContents() {
@@ -118,8 +95,6 @@ public class ShoppingList implements Parcelable {
         parcel.writeString(name);
         parcel.writeDouble(quantity);
         parcel.writeDouble(price);
-        parcel.writeString(map);
-        parcel.writeString(video);
     }
 
 

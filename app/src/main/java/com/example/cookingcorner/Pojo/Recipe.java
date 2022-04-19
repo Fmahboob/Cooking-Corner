@@ -25,6 +25,9 @@ public class Recipe {
         this.strInstructions = strInstructions;
     }
 
+    public Recipe(String string, String cursorString) {
+    }
+
     public Recipe() {
     }
 
