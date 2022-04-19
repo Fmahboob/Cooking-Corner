@@ -106,6 +106,8 @@ public class CookingDatabase extends SQLiteOpenHelper {
         return shoppingList;
     }
 
+
+
     public int updateShoppingList(ShoppingList shoppingList){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -122,4 +124,7 @@ public class CookingDatabase extends SQLiteOpenHelper {
                 new String[]{String.valueOf(shoppingList)});
         db.close();
     }
+
+
+
 }

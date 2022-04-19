@@ -63,4 +63,5 @@ public class CustomRecipeAdapter extends RecyclerView.Adapter<CustomRecipeAdapte
             recipeImage = itemView.findViewById(R.id.recipe_image);
         }
     }
+
 }
