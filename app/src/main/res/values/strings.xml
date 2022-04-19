@@ -37,9 +37,11 @@
     <string name="tipDetail4">This helps them brown quickly and, on poultry, crisps up the skin. </string>
     <string name="tipDetail5">The purpose of an oven mitt is to be a heat insulator, the water just nullifies this effect. Steam has nothing to do with it, as the effect happens even far below waters boiling temperature.</string>
 
-
+    <string name="about_us">We are here to help you start your culinary journey. Our app helps you search for various recipes for you to cook. You can also add ingredients from different recipes to a shopping list so you remember all the ingredients for the dish you will cook. We also have a map feature that allows you to find grocery stores near you. If you enjoy a recipe you can share it with your friends and family so they can try it to!</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="action_timer">Timer</string>
+    <string name="menu_tips">Tips</string>
+    <string name="menu_about">About Us</string>
 </resources>

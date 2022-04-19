@@ -4,10 +4,7 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_baseline_home_24"
-            android:title="@string/menu_home" />
+
         <item
             android:id="@+id/nav_shop"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
@@ -16,6 +13,15 @@
             android:id="@+id/nav_recipe"
             android:icon="@drawable/ic_baseline_notes_24"
             android:title="@string/menu_recipe" />
+        <item
+            android:id="@+id/nav_tips"
+            android:icon="@drawable/ic_baseline_soup_kitchen_24"
+            android:title="@string/menu_tips" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="@string/menu_about" />
+
         <item
             android:id="@+id/nav_credit"
             android:icon="@drawable/ic_baseline_notes_24"

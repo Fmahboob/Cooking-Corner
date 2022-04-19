@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_recipe">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_about"
         android:name="com.example.cookingcorner.Fragments.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="About Us"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_shop"
         android:name="com.example.cookingcorner.Fragments.ShoppingFragment"
-        android:label="@string/menu_shop"
+        android:label="Shopping List"
         tools:layout="@layout/fragment_shopping_list" />
     <fragment
         android:id="@+id/nav_recipe"
         android:name="com.example.cookingcorner.Fragments.RecipeFragment"
-        android:label="@string/menu_recipe"
-        tools:layout="@layout/fragment_recipe" >
+        android:label="Recipes"
+        tools:layout="@layout/fragment_recipe">
         <action
             android:id="@+id/action_nav_recipe_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -30,22 +30,22 @@
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
     <fragment
-        android:id="@+id/favouriteFragment"
-        android:name="com.example.cookingcorner.Fragments.FavouriteFragment"
-        android:label="fragment_favourite"
-        tools:layout="@layout/fragment_favourite" />
-    <fragment
         android:id="@+id/addEditFragment"
         android:name="com.example.cookingcorner.Fragments.AddEditFragment"
         android:label="Ingredient Details" />
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.cookingcorner.Fragments.SettingsFragment"
-        android:label="fragment_settings" />
+        android:label="Settings" />
     <fragment
         android:id="@+id/nav_credit"
         android:name="com.example.cookingcorner.Fragments.CreditFragment"
-        android:label="fragment_credit"
+        android:label="Credit"
         tools:layout="@layout/fragment_credit" />
+    <fragment
+        android:id="@+id/nav_tips"
+        android:name="com.example.cookingcorner.CookingTipsFragment"
+        android:label="Tips"
+        tools:layout="@layout/fragment_cooking_tips" />
 
 </navigation>
