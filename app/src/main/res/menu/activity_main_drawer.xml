@@ -14,11 +14,15 @@
             android:title="@string/menu_shop" />
         <item
             android:id="@+id/nav_recipe"
-            android:icon="@drawable/ic_baseline_notes_24"
+            android:icon="@drawable/ic_baseline_food_bank_24"
             android:title="@string/menu_recipe" />
         <item
             android:id="@+id/nav_credit"
             android:icon="@drawable/ic_baseline_notes_24"
             android:title="@string/menu_credit" />
+        <item
+            android:id="@+id/favouriteFragment"
+            android:icon="@drawable/ic_baseline_notes_24"
+            android:title="@string/menu_favourite" />
     </group>
 </menu>

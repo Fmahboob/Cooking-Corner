@@ -1,5 +1,6 @@
 package com.example.cookingcorner.ShoppingRecyclerView;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cookingcorner.CookingDatabase;
 import com.example.cookingcorner.Fragments.AddEditFragment;
 import com.example.cookingcorner.Pojo.ShoppingList;
 import com.example.cookingcorner.R;
@@ -58,6 +60,29 @@ public class CustomShoppingAdapter extends RecyclerView.Adapter<CustomShoppingAd
                 Navigation.findNavController(view).
                         navigate(R.id.addEditFragment, extra);            }
         });
+
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(context)
+                        .setTitle("Delete")
+                        .setMessage("Are you sure you want to delete")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton("Yes", (dialogInterface, i) -> {
+                            CookingDatabase db = new CookingDatabase(context);
+                            //Delete record from database
+                            db.deleteShoppingList(shoppingArrayList.get(position).getGid());
+                            //Delete the record from the ArrayList
+                            shoppingArrayList.remove(position);
+                            //Notify the RecyclerView the item was removed
+                            notifyItemRemoved(position);
+                            db.close();
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
+            }
+        });
+
     }
 
     @Override

@@ -3,6 +3,8 @@ package com.example.cookingcorner.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +12,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.cookingcorner.CookingDatabase;
+import com.example.cookingcorner.Fragments.FavouriteRecyclerView.CustomFavouriteAdapter;
 import com.example.cookingcorner.R;
+import com.example.cookingcorner.ShoppingRecyclerView.CustomShoppingAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,15 +69,12 @@ public class FavouriteFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_favourite, container, false);
 
-        if(mParam1 != null){
-            TextView recipeName = (TextView) view.findViewById(R.id.detailRecipeName);
-            recipeName.setText(mParam1);
-        }
+        RecyclerView recyclerView = view.findViewById(R.id.recipeList);
+        CookingDatabase cookingDatabase = new CookingDatabase(getContext());
+        CustomFavouriteAdapter customFavouriteAdapter = new CustomFavouriteAdapter(cookingDatabase.getAllFavourite(), getContext());
+        recyclerView.setAdapter(customFavouriteAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        if(mParam2 != 0){
-            ImageView detailImageRecipe = (ImageView) view.findViewById(R.id.detailRecipeImage);
-            detailImageRecipe.setImageResource(mParam2);
-        }
         return view;
 
 

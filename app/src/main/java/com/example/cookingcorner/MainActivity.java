@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.appBarMain.toolbar);
 
-
+        binding.appBarMain.fab.setImageResource(R.drawable.ic_baseline_add_24);
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavDestination currentFragment = navController.getCurrentDestination();
+                 NavDestination currentFragment = navController.getCurrentDestination();
                 if (currentFragment.getId() == R.id.nav_shop) {
                     Bundle extra = new Bundle();
                     extra.putInt(AddEditFragment.ACTION_TYPE,
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_credit, R.id.nav_shop, R.id.nav_recipe)
+                R.id.nav_home, R.id.nav_credit, R.id.nav_shop, R.id.nav_recipe, R.id.favouriteFragment)
                 .setOpenableLayout(drawer)
                 .build();
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
