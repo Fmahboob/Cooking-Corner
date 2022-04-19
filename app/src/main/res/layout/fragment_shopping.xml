@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,9 +8,19 @@
     tools:context=".Fragments.ShoppingFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shoppingList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layoutAnimation="@anim/shipping_list_layout_animation"
-        android:id="@+id/shoppingList"/>
+        android:layout_height="wrap_content"
+        android:layoutAnimation="@anim/shipping_list_layout_animation" >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/mapIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_baseline_map_24"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </LinearLayout>

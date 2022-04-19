@@ -26,9 +26,7 @@
     <string name="credit_text_4">https://www.google.com/search?q=cooking%20logotbm=ischchips=q:cooking%20logo%2Cg_1:kitchen:6emtaLk8eUM%3Dtbs=il:clhl=en-USsa=Xved=0CAAQ1vwEahcKEwj4yKzbnpH3AhUAAAAAHQAAAAAQAgbiw=1349bih=625#imgrc=2UnzF6k6cdHztM</string>
 
 
-
-
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_timer">Timer</string>
 </resources>
