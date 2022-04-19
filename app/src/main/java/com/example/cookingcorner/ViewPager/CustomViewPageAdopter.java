@@ -18,15 +18,15 @@ public class CustomViewPageAdopter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return FavouriteFragment.newInstance(R.string.tip1, R.drawable.custombackground, R.string.tipDetail1);
+                return FavouriteFragment.newInstance(R.string.tip1, R.drawable.recipe, R.string.tipDetail1);
             case 1:
-                return FavouriteFragment.newInstance(R.string.tip2, R.drawable.custombackground, R.string.tipDetail2);
+                return FavouriteFragment.newInstance(R.string.tip2, R.drawable.cuttingboard, R.string.tipDetail2);
             case 2:
-                return FavouriteFragment.newInstance(R.string.tip3, R.drawable.custombackground, R.string.tipDetail3);
+                return FavouriteFragment.newInstance(R.string.tip3, R.drawable.knives, R.string.tipDetail3);
             case 3:
-                 return FavouriteFragment.newInstance(R.string.tip4, R.drawable.custombackground, R.string.tipDetail4);
+                 return FavouriteFragment.newInstance(R.string.tip4, R.drawable.drymeat, R.string.tipDetail4);
             case 4:
-                return FavouriteFragment.newInstance(R.string.tip5, R.drawable.custombackground, R.string.tipDetail5);
+                return FavouriteFragment.newInstance(R.string.tip5, R.drawable.dampoven, R.string.tipDetail5);
         }
         return FavouriteFragment.newInstance(0,0,0);
     }
