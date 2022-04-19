@@ -1,6 +1,8 @@
 package com.example.cookingcorner.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.cookingcorner.CookingDatabase;
 import com.example.cookingcorner.Pojo.ShoppingList;
@@ -79,6 +83,7 @@ public class ShoppingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_shopping, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.shoppingList);
@@ -86,6 +91,23 @@ public class ShoppingFragment extends Fragment {
         CustomShoppingAdapter customShoppingAdapter = new CustomShoppingAdapter(cookingDatabase.getAllShoppingList(), getContext());
         recyclerView.setAdapter(customShoppingAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        Button mapButton = view.findViewById(R.id.mapIntent);
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=grocery+store");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                try{
+                    startActivity(mapIntent);
+                }
+               catch (Exception e){
+                   Toast.makeText(getContext(), "No Apps Found", Toast.LENGTH_LONG).show();
+               }
+
+            }
+        });
 
         return view;
     }

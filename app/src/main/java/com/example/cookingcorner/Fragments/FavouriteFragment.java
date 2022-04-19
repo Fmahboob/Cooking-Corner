@@ -21,12 +21,15 @@ public class FavouriteFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final int ARG_PARAM1 = 1;
+    private static final int ARG_PARAM2 = R.drawable.ic_baseline_add_24;
+
+    private static final int ARG_PARAM3 = 2;
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
+    private int mParam1;
     private int mParam2;
+    private int mParam3;
 
     public FavouriteFragment() {
         // Required empty public constructor
@@ -41,11 +44,12 @@ public class FavouriteFragment extends Fragment {
      * @return A new instance of fragment FavouriteFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FavouriteFragment newInstance(String param1, String param2) {
+    public static FavouriteFragment newInstance(int param1, int param2, int param3) {
         FavouriteFragment fragment = new FavouriteFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putInt(String.valueOf(ARG_PARAM1), param1);
+        args.putInt(String.valueOf(ARG_PARAM2), param2);
+        args.putInt(String.valueOf(ARG_PARAM2), param3);
         fragment.setArguments(args);
         return fragment;
     }
@@ -54,8 +58,9 @@ public class FavouriteFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getInt(ARG_PARAM2);
+            mParam1 = getArguments().getInt(String.valueOf(ARG_PARAM1));
+            mParam2 = getArguments().getInt(String.valueOf(ARG_PARAM2));
+            mParam3 = getArguments().getInt(String.valueOf(ARG_PARAM3));
         }
     }
 
@@ -64,15 +69,21 @@ public class FavouriteFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_favourite, container, false);
 
-        if(mParam1 != null){
-            TextView recipeName = (TextView) view.findViewById(R.id.detailRecipeName);
-            recipeName.setText(mParam1);
+        if(mParam1 != 0){
+            TextView tip = (TextView) view.findViewById(R.id.detailRecipeName);
+            tip.setText(mParam1);
         }
 
         if(mParam2 != 0){
-            ImageView detailImageRecipe = (ImageView) view.findViewById(R.id.detailRecipeImage);
-            detailImageRecipe.setImageResource(mParam2);
+            ImageView tipImage = (ImageView) view.findViewById(R.id.detailRecipeImage);
+           tipImage.setImageResource(mParam2);
         }
+
+        if(mParam3 != 0){
+            TextView tipDetail = (TextView) view.findViewById(R.id.detailRecipeName);
+            tipDetail.setText(mParam1);
+        }
+
         return view;
 
 
