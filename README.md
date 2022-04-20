@@ -53,11 +53,21 @@ In this app Customer can search food recipes. They can save their favourite reci
 
 Screen shots of the Application
 
-![image](https://user-images.githubusercontent.com/91429784/163279088-eab2f3d5-8418-4399-92ec-461fa288e359.png)
+![Screenshot 2022-04-20 171302](https://user-images.githubusercontent.com/91429784/164325429-95a825c4-e7da-4821-8519-b797ae975064.png)
 
-![image](https://user-images.githubusercontent.com/91429784/163279275-5c730dd1-7e5b-4196-b943-18474e0055e7.png)
 
-![image](https://user-images.githubusercontent.com/91429784/163279304-da363257-07e0-4eab-bc2b-b8348fd3d066.png)
+![Screenshot 2022-04-20 171427](https://user-images.githubusercontent.com/91429784/164325578-63594387-9d5c-4051-a101-da70b4d95c7b.png)
+
+
+![image](https://user-images.githubusercontent.com/91429784/164325659-d6d75763-410f-4e82-a2d9-5474ba4c5601.png)
+
+
+![image](https://user-images.githubusercontent.com/91429784/164325873-2a95049e-daa8-49da-952b-fa3447d6a020.png)
+
+![image](https://user-images.githubusercontent.com/91429784/164325914-478a908c-0c05-4707-9dfa-240bd432bb55.png)
+
+![image](https://user-images.githubusercontent.com/91429784/164325950-b3be2bec-e4c3-4f2c-a8c4-89e6d68de63e.png)
+
 
 ![image](https://user-images.githubusercontent.com/91429784/163279332-05c94990-30cb-4432-8eca-dc6ff25bb786.png)
 
