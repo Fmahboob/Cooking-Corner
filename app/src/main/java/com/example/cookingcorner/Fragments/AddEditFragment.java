@@ -82,6 +82,9 @@ public class AddEditFragment extends Fragment {
         EditText name = view.findViewById(R.id.ingredientName);
         EditText price = view.findViewById(R.id.ingredientPrice);
         EditText quantity = view.findViewById(R.id.ingredientQuantity);
+       // EditText map = view.findViewById(R.id.map);
+        EditText video = view.findViewById(R.id.recipe_video);
+
         Button submit = view.findViewById(R.id.submitButton);
 
         if(getArguments() != null){
@@ -104,6 +107,9 @@ public class AddEditFragment extends Fragment {
                     shoppingList.setName(name.getText().toString());
                     shoppingList.setPrice(Double.parseDouble(price.getText().toString()));
                     shoppingList.setQuantity(Double.parseDouble(quantity.getText().toString()));
+                   // shoppingList.setVideo(map.getText().toString());
+                    shoppingList.setVideo(video.getText().toString());
+
 
                     if (view.requestFocus()) {
                         InputMethodManager imm = (InputMethodManager)

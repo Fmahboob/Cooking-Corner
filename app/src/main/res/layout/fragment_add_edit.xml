@@ -55,6 +55,22 @@
         android:minHeight="48dp"
         android:inputType="numberDecimal|numberSigned" />
 
+    <TextView
+        android:id="@+id/video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/recipe_video"
+        android:text="Web" />
+
+    <EditText
+        android:id="@+id/recipe_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:ems="10"
+        android:minHeight="48dp"
+        android:inputType="textPersonName"  />
+
     <Button
         android:id="@+id/submitButton"
         android:layout_width="match_parent"

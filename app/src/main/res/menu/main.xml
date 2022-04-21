@@ -5,6 +5,24 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-
         app:showAsAction="never" />
+    <item
+        android:id="@+id/font_size_settings"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Font Size"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/font_color_settings"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/font_color_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/font_style_settings"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/font_style_settings"
+        app:showAsAction="never" />
+
 </menu>
