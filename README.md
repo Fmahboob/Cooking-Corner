@@ -1,19 +1,19 @@
 # **Cooking Corner**
 
 ### Introduction
-In this app Customer can search food recipes. They can save their favourite recipes. This also has a shopping list. Customer can change unit and currency and layout View.
+In this app Customer can find food recipes. This also has a shopping list. They can find cooking tips also. Customer can change font size and layout View.
 
 ### Description
 *	In home fragment it has all about the app, app logo and name of our app.
-*	In Recycler View all recipes from API key will come and show images and recipe name, this recycler view will have a card view, when clicked on that it will go to other Fragment and will show full recipe.
-*	The fab button on recipe fragment will save the recipes in favourite recipe and it will be a View Pager 2.
+*	In Recycler View all recipes from API key will come and show recipe name , recipe image, recipe category and the instructions of the recipe.
 *	There will be shopping Fragment which have Shopping list from database. It has Item names, Item prices and Quantities. Shopping list can be CRUD.
-*	In Shopping Fragment, we have 3 more buttons that can add, delete, and update our shopping list. 
+*	In Shopping Fragment, we have 2 more buttons that can delete, and update our shopping list also fab button will add the the list. 
 *	The fab button on shopping list Fragment can show grocery stores near me location.
-*	In settings menu we have Currency, Unit, and Layout.
-*	From Settings menu We will have a credit page.
-*	We will use Timer intent, Web Intent, Map Intent and Search Intent.
-*	For tool, recipes can be save in favourite recipes Fragment. 
+*	In settings menu we have Currency, font size and Layout.
+*	We have a credit page.
+*	We will use timer intent, Web intent, and map intent.
+*	In recipe fragment we have fab button to go for web intent.
+*	In shopping list wee have a button to go for map intent.
 
 
 
