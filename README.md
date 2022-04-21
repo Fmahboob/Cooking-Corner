@@ -9,9 +9,9 @@ In this app Customer can find food recipes. This also has a shopping list. They 
 *	There will be shopping Fragment which have Shopping list from database. It has Item names, Item prices and Quantities. Shopping list can be CRUD.
 *	In Shopping Fragment, we have 2 more buttons that can delete, and update our shopping list also fab button will add the the list. 
 *	The fab button on shopping list Fragment can show grocery stores near me location.
-*	In settings menu we have Currency, font size and Layout.
+*	In settings menu we have font size and Layout.
 *	We have a credit page.
-*	We will use timer intent, Web intent, and map intent.
+*	We will use timer intent, web intent, and map intent.
 *	In recipe fragment we have fab button to go for web intent.
 *	In shopping list wee have a button to go for map intent.
 
