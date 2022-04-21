@@ -96,7 +96,7 @@ Screen shots of the Application
 *   Implement Picaso.
 
 ##### Permissions
-* Permission for android
+* Permission for internet
 * Permission for timer.
 
 
